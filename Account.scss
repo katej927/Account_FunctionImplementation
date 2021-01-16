@@ -1,0 +1,179 @@
+@import "../../styles/common.scss";
+
+.account {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: $logonAccountCommonFontFamily;
+
+  nav {
+    border: 1px solid black;
+    height: 95px;
+  }
+
+  main {
+    border: 1px solid red;
+    width: 476px;
+    height: 877px;
+    margin-bottom: 60px;
+
+    .accountTitle {
+      border: 1px solid greenyellow;
+      margin-bottom: 64px;
+      font-size: 24px;
+      text-align: center;
+    }
+
+    .inputCheckboxBundle {
+      p {
+        font-size: 14px;
+        color: #737373;
+      }
+
+      .warningMsg {
+        color: red;
+      }
+
+      .inputBundle {
+        div {
+          margin-bottom: 8px;
+        }
+        .accountTextInput {
+          height: 79px;
+
+          input {
+            height: 32px;
+            width: 100%;
+            margin: 6px 0px 2px;
+            padding: 1px 2px 7px 0px;
+            //border: 0px;
+            border: 1px solid #737373;
+            border-bottom: 1px solid #737373;
+            font-size: 18px;
+
+            &:focus {
+              outline: none;
+              border-bottom: 3px solid #63cd80;
+            }
+          }
+        }
+      }
+
+      .checkboxBundle {
+        letter-spacing: 2px;
+        word-spacing: 2px;
+
+        .agreement {
+          font-size: 14px;
+          color: #737373;
+        }
+
+        .firstCheckboxBundle {
+          margin-top: 10px;
+
+          .specificFont {
+            font-family: $accountFontfamily;
+            font-weight: bolder;
+          }
+
+          .adInputTitleDiv {
+            height: 20px;
+            display: flex;
+            align-items: center;
+
+            .labelDiv {
+              border: 1px solid blue;
+              width: 20px;
+              height: 20px;
+
+              input[id="firstCheckbox"] {
+                display: none;
+              }
+
+              input[id="firstCheckbox"] + label {
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                margin-right: 10px;
+                padding: 10px;
+                border: 1px solid #737373;
+                cursor: pointer;
+              }
+
+              input[id="firstCheckbox"]:checked + label {
+                width: 5px;
+                height: 5px;
+                background-color: black;
+                outline: 2px solid #63cd80;
+              }
+            }
+          }
+
+          .adDescription {
+            border: 1px solid black;
+            height: 110px;
+            padding: 10px 0 20px;
+            line-height: 15px;
+          }
+        }
+
+        .secondCheckboxBundle {
+          height: 60px;
+          margin-top: 30px;
+        }
+      }
+    }
+
+    .registerMovetologinBundle {
+      @include flex(center, _);
+      flex-direction: column;
+      //margin: 0 auto;
+
+      .registrationBtn {
+        border: 1px solid red;
+        width: 240px;
+        height: 40px;
+        margin: 30px auto auto auto;
+        background-color: black;
+        color: white;
+        font-size: 14px;
+
+        &:hover {
+          background-color: #737373;
+        }
+      }
+
+      div {
+        margin: 26px auto auto auto;
+        font-size: 16px;
+        color: #737373;
+      }
+    }
+  }
+
+  footer {
+    border: 1px solid orange;
+    height: 38px;
+    width: 100%;
+    padding: 0 14px;
+    @include flex(space-around, _);
+    div {
+      padding-left: 0px;
+      a {
+        margin-right: 10px;
+        font-size: 11px;
+        color: #757575;
+      }
+    }
+  }
+
+  /*추후 삭제*/
+  section {
+    border: 1px solid blue;
+    article {
+      border: 1px solid green;
+    }
+  }
+}
